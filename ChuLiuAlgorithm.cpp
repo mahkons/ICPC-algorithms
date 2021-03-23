@@ -58,7 +58,7 @@ vector<Edge> findMST(const vector<vector<Edge>>& g) {
             x = emin[x].to;
         }
         if (x == -1 || used[x] != s) continue;
-        vector<int> cycle {x};
+        vector<int> cycle = {x};
         for (int y = emin[x].to; y != x; y = emin[y].to) {
             cycle.push_back(y);
             col[y] = x;
