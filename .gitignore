@@ -1,11 +1,10 @@
 # vim
-
 *.swp
 *.swn
 *.swo
 
 # extra
-comments
+comments.txt
 main.cpp
 main
 input.txt
