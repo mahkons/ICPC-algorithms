@@ -1,8 +1,9 @@
 #pragma once
 
-namespace {
+namespace ICPC {
 
 typedef long long ll;
+__extension__ typedef __int128 int128;
 
 template <typename T>
 constexpr T msum(T a, T b, T mod) {
@@ -21,7 +22,7 @@ constexpr int mmul(int a, int b, int mod) {
 }
 
 constexpr ll mmul(ll a, ll b, ll mod) {
-    return (static_cast<__int128>(a) * b) % mod;
+    return (static_cast<int128>(a) * b) % mod;
 }
 
 template <typename T, typename K>
