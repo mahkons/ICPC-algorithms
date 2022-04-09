@@ -16,8 +16,8 @@ namespace ICPC {
         if (!(n & 1)) return 2;
 
         auto f = [n](ll x) { return mmul(x, x, n) + 1; }; // it is ok if 0 == n
+        ll cur = 1;
         for (int st = 2, lg = 0; ; st = gen() % n) {
-            ll cur = 1;
             for (ll x = st, y = f(st); x != y; x = f(x), y = f(f(y))) {
                 if (ll c = mmul(cur, std::abs(x - y), n); c) cur = c;
                 if (lg++ == LOG) {
